@@ -1,0 +1,6 @@
+european male
+asian male
+european female
+asian female
+africa male
+africa female
