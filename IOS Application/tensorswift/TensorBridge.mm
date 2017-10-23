@@ -1,41 +1,22 @@
-
-
-
+//
+// load the model and run the CNN
+//
 #import <AssertMacros.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 #import <CoreImage/CoreImage.h>
 #import <ImageIO/ImageIO.h>
 #import "TensorBridge.h"
-//#import "CameraExample-Swift.h"
 #include "tensorflow/core/public/session.h"
 #include "tensorflow/core/util/memmapped_file_system.h"
-
 #include <sys/time.h>
-
 #import "tensorflow_utils.h"
 
-// If you have your own model, modify this to the file name, and make sure
-// you've added the file to your app resources too.
-//static NSString* model_file_name = @"retrained_graph_stripped";
-static NSString* model_file_name = @"face_graph";
-//static NSString* model_file_name = @"retrained_graph";
-static NSString* model_file_type = @"pb";
-// This controls whether we'll be loading a plain GraphDef proto, or a
-// file created by the convert_graphdef_memmapped_format utility that wraps a
-// GraphDef and parameter file that can be mapped into memory from file to
-// reduce overall memory usage.
-const bool model_uses_memory_mapping = false;
-// If you have your own model, point this to the labels file.
-static NSString* labels_file_name = @"retrained_labels";
-//static NSString* labels_file_name = @"mylabels";
-static NSString* labels_file_type = @"txt";
-// These dimensions need to match those the model was trained with.
-//const int wanted_input_width = 224;
-//const int wanted_input_height = 224;
-//const int wanted_input_channels = 3;
-//const float input_mean = 117.0f;
-//const float input_std = 1.0f;
 
+static NSString* model_file_name = @"face_graph";
+static NSString* model_file_type = @"pb";
+const bool model_uses_memory_mapping = false;
+static NSString* labels_file_name = @"face_labels";
+static NSString* labels_file_type = @"txt";
 const int wanted_input_width = 299;
 const int wanted_input_height = 299;
 const int wanted_input_channels = 3;
@@ -44,27 +25,9 @@ const float input_std = 128.0f;
 
  id <TensorDelegate> delegate;
 
-//const std::string input_layer_name = "input";
 const std::string input_layer_name = "Mul";
-//const std::string output_layer_name = "softmax1";
 const std::string output_layer_name = "final_result:0";
-//const std::string output_layer_name = "final_result";
-/*
-static NSString* model_file_name = @"mygraph";
-static NSString* model_file_type = @"pb";
-const bool model_uses_memory_mapping = true;
-static NSString* labels_file_name = @"mylabels";
-static NSString* labels_file_type = @"txt";
-const int wanted_input_width = 299;
-const int wanted_input_height = 299;
-const int wanted_input_channels = 3;
-const float input_mean = 128.0f;
-const float input_std = 128.0f;
-id <TensorDelegate> delegate;
-const std::string input_layer_name = "Mul";
-const std::string output_layer_name = "final_result";
-bool isRunning = true;
-*/
+
 
     std::unique_ptr<tensorflow::Session> tf_session;
     std::unique_ptr<tensorflow::MemmappedEnv> tf_memmapped_env;
@@ -188,9 +151,7 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext =
     }
 }
 
-//- (void)dealloc {
-//    [super dealloc];
-//}
+
 
 @end
 

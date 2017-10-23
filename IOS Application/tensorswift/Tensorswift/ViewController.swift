@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  Tensorswift
+//  The interface of this app
 //
 
 import UIKit

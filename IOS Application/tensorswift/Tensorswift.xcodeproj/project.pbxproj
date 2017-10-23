@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		6F9FCF141F9448D100F1D90C /* face_graph.pb in Resources */ = {isa = PBXBuildFile; fileRef = 6F9FCF131F9448D100F1D90C /* face_graph.pb */; };
 		6FF1AE6E1F90DAE2004655D2 /* retrained_graph_stripped.pb in Resources */ = {isa = PBXBuildFile; fileRef = 6FF1AE6C1F90DAE2004655D2 /* retrained_graph_stripped.pb */; };
-		6FF1AE6F1F90DAE2004655D2 /* retrained_labels.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6FF1AE6D1F90DAE2004655D2 /* retrained_labels.txt */; };
+		6FF1AE6F1F90DAE2004655D2 /* face_labels.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6FF1AE6D1F90DAE2004655D2 /* face_labels.txt */; };
 		C87CC5C41E24B863000F83A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87CC5C31E24B863000F83A5 /* AppDelegate.swift */; };
 		C87CC5C61E24B863000F83A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87CC5C51E24B863000F83A5 /* ViewController.swift */; };
 		C87CC5C91E24B863000F83A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C87CC5C71E24B863000F83A5 /* Main.storyboard */; };
@@ -29,14 +29,14 @@
 /* Begin PBXFileReference section */
 		6F9FCF131F9448D100F1D90C /* face_graph.pb */ = {isa = PBXFileReference; lastKnownFileType = file; path = face_graph.pb; sourceTree = "<group>"; };
 		6FF1AE6C1F90DAE2004655D2 /* retrained_graph_stripped.pb */ = {isa = PBXFileReference; lastKnownFileType = file; path = retrained_graph_stripped.pb; sourceTree = "<group>"; };
-		6FF1AE6D1F90DAE2004655D2 /* retrained_labels.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = retrained_labels.txt; sourceTree = "<group>"; };
+		6FF1AE6D1F90DAE2004655D2 /* face_labels.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = face_labels.txt; sourceTree = "<group>"; };
 		C87CC5C01E24B863000F83A5 /* Tensorswift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tensorswift.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C87CC5C31E24B863000F83A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C87CC5C31E24B863000F83A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Tensorswift/AppDelegate.swift; sourceTree = "<group>"; };
 		C87CC5C51E24B863000F83A5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C87CC5C81E24B863000F83A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C87CC5CA1E24B863000F83A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C87CC5CA1E24B863000F83A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Tensorswift/Assets.xcassets; sourceTree = "<group>"; };
 		C87CC5CD1E24B863000F83A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		C87CC5CF1E24B863000F83A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C87CC5CF1E24B863000F83A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Tensorswift/Info.plist; sourceTree = "<group>"; };
 		C87CC5D51E24B88C000F83A5 /* TensorBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TensorBridge.h; path = Tensorswift/TensorBridge.h; sourceTree = "<group>"; };
 		C87CC5D61E24B8B4000F83A5 /* Tensorswift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tensorswift-Bridging-Header.h"; sourceTree = "<group>"; };
 		C87CC5D91E24BAE7000F83A5 /* libprotobuf-lite.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libprotobuf-lite.a"; sourceTree = "<group>"; };
@@ -67,9 +67,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6F56C04B1F81118A002634C0 /* helper */ = {
+		6F56C04B1F81118A002634C0 /* supportFiles */ = {
 			isa = PBXGroup;
 			children = (
+				C87CC5C31E24B863000F83A5 /* AppDelegate.swift */,
+				C87CC5CA1E24B863000F83A5 /* Assets.xcassets */,
+				C87CC5CC1E24B863000F83A5 /* LaunchScreen.storyboard */,
+				C87CC5CF1E24B863000F83A5 /* Info.plist */,
 				C8D4A3901E288321005B0640 /* AVCaptureDevice+Extension.swift */,
 				C8D4A38E1E288255005B0640 /* VideoCapture.swift */,
 				C87CC5D61E24B8B4000F83A5 /* Tensorswift-Bridging-Header.h */,
@@ -80,24 +84,13 @@
 				C87CC5EA1E260EBE000F83A5 /* tensorflow_utils.h */,
 				C87CC5EB1E260EBE000F83A5 /* tensorflow_utils.mm */,
 			);
-			name = helper;
-			sourceTree = "<group>";
-		};
-		6FE042221F81F767004071CB /* assistent */ = {
-			isa = PBXGroup;
-			children = (
-				C87CC5C31E24B863000F83A5 /* AppDelegate.swift */,
-				C87CC5CA1E24B863000F83A5 /* Assets.xcassets */,
-				C87CC5CC1E24B863000F83A5 /* LaunchScreen.storyboard */,
-				C87CC5CF1E24B863000F83A5 /* Info.plist */,
-			);
-			name = assistent;
+			name = supportFiles;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		C87CC5B71E24B863000F83A5 = {
 			isa = PBXGroup;
 			children = (
-				6F56C04B1F81118A002634C0 /* helper */,
 				C87CC5C21E24B863000F83A5 /* Tensorswift */,
 				C87CC5C11E24B863000F83A5 /* Products */,
 				C87CC5DD1E24BCEB000F83A5 /* Frameworks */,
@@ -115,10 +108,10 @@
 		C87CC5C21E24B863000F83A5 /* Tensorswift */ = {
 			isa = PBXGroup;
 			children = (
-				C8D4A3BB1E294D1B005B0640 /* Model */,
-				6FE042221F81F767004071CB /* assistent */,
 				C87CC5C51E24B863000F83A5 /* ViewController.swift */,
 				C87CC5C71E24B863000F83A5 /* Main.storyboard */,
+				6F56C04B1F81118A002634C0 /* supportFiles */,
+				C8D4A3BB1E294D1B005B0640 /* Model */,
 			);
 			path = Tensorswift;
 			sourceTree = "<group>";
@@ -139,7 +132,7 @@
 			children = (
 				6FF1AE6C1F90DAE2004655D2 /* retrained_graph_stripped.pb */,
 				6F9FCF131F9448D100F1D90C /* face_graph.pb */,
-				6FF1AE6D1F90DAE2004655D2 /* retrained_labels.txt */,
+				6FF1AE6D1F90DAE2004655D2 /* face_labels.txt */,
 			);
 			name = Model;
 			path = ..;
@@ -208,7 +201,7 @@
 			files = (
 				6FF1AE6E1F90DAE2004655D2 /* retrained_graph_stripped.pb in Resources */,
 				6F9FCF141F9448D100F1D90C /* face_graph.pb in Resources */,
-				6FF1AE6F1F90DAE2004655D2 /* retrained_labels.txt in Resources */,
+				6FF1AE6F1F90DAE2004655D2 /* face_labels.txt in Resources */,
 				C87CC5CE1E24B863000F83A5 /* LaunchScreen.storyboard in Resources */,
 				C87CC5CB1E24B863000F83A5 /* Assets.xcassets in Resources */,
 				C87CC5C91E24B863000F83A5 /* Main.storyboard in Resources */,
@@ -249,6 +242,7 @@
 				C87CC5CD1E24B863000F83A5 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = Tensorswift;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

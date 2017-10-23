@@ -1,3 +1,6 @@
+//
+// Capture the video
+//
 import AVFoundation
 import Foundation
 
