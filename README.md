@@ -5,9 +5,9 @@ This repository is used to store and share the source code of GenderRecognition 
 #
 Author: 
 
-         Zhen Jia(732355 )
+         Zhen Jia (732355)
          
-         Sixue Yang(722804)
+         Sixue Yang (722804)
          
 Supervisor: 
 
