@@ -3,8 +3,9 @@
 This repository is used to store and share the source code of GenderRecognition project.
 
 
-student: Zhen Jia(732355 ) 
 
+student: 
+         Zhen Jia(732355 ) 
          Sixue Yang(722804)
          
 Supervisor: Prof. Richard Sinnott
