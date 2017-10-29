@@ -1,4 +1,4 @@
-#  COMP90019 Distributed Computing Project (25 Credits) Gender recognition application using deep learning with Tensorflow
+#  COMP90019 Distributed Computing Project: Gender recognition application using deep learning with Tensorflow
 
 This repository is used to store and share the source code of GenderRecognition project.
 
